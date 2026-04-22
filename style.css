@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #1f242d;
+  color: white;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 80px 9%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f242d;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #7cf03d;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+  color: #7cf03d;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding-top: 120px;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.home-info {
+  max-width: 600px;
+}
+
+.home-info h1 {
+  font-size: 55px;
+}
+
+.home-info h2 {
+  font-size: 30px;
+  margin-top: -8px;
+}
+
+.home-info p {
+  margin: 15px 0 25px;
+}
+
+.home-img {
+  width: 400px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3df0d5;
+  box-shadow: 0 0 5px #09d1df;
+}
+
+.sci a {
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid #7cf03d;
+  border-radius: 50%;
+  margin: 0 8px;
+  font-size: 20px;
+  color: #7cf03d;
+  transition: 0.3s;
+}
+
+.sci a:hover {
+  background: #7cf03d;
+  color: #1f242d;
+}
+
+/* Section Styles */
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #7cf03d;
+  background: #1f1f1f;
+  border-left: 4px solid #00f0ff;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.about, .academic, .certifications, .projects, .contact, .resume {
+  background: #1f1f2e;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* Certifications and Projects */
+.certifications-gallery, .project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.certifications, .project {
+  background: #2e323e;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(124, 240, 61, 0.1);
+}
+
+.certifications:hover, .project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(124, 240, 61, 0.3);
+}
+
+.certifications img, .project img {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 2px solid #00f0ff;
+  transition: transform 0.3s ease;
+}
+
+.certifications img:hover, .project img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
+}
+
+/* Resume */
+.resume {
+  text-align: center;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #7cf03d;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #7cf03d;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.download-btn:hover {
+  background: #6bd336;
+  color: #1f242d;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
